@@ -2,6 +2,10 @@ def checkmate(board):
     board = board.splitlines()
     size = len(board)
 
+    for row in board:
+        if len(row) != size:
+            return "Error"
+
     # หาตำแหน่ง King
     king_pos = None
     for i in range(size):
