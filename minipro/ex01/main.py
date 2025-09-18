@@ -6,7 +6,7 @@ def main():
 """\
 R...
 .K..
-..P.
+..P.......
 ....\
 """,
 
@@ -20,8 +20,10 @@ R..Q
 
     for idx, b in enumerate(boards, start=1):
         print(f"\nBoard {idx}:\n{b}")
-        if is_checkmate(b):
+        if is_checkmate(b) == True:
             print("Checkmate")
+        elif is_checkmate(b) == "Error":
+            print("Error")    
         elif is_check(b):
             print("Check")
         else:
