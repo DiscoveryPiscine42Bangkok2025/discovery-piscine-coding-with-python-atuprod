@@ -4,7 +4,7 @@ def main():
     boards = [
 """\
 R...
-.K..
+.K.....
 ..P.
 ....\
 """, 
@@ -40,13 +40,22 @@ Q...
 .P..
 K...
 ....\
+""",
+
+"""\
+.k..
+.P..
+....
+....\
 """
     ]
 
     for idx, b in enumerate(boards, start=1):
         print(f"\nTest case {idx}:")
         print(b)
-        checkmate(b)
+        if checkmate(b) == "Error":
+            print("Error")
+        
 
 if __name__ == "__main__":
     main()
