@@ -55,6 +55,10 @@ def is_checkmate(board_str):
     board = board_str.splitlines()
     size = len(board)
 
+    for row in board:
+        if len(row) != size:
+            return "Error"
+
     # หาตำแหน่ง King
     king_pos = None
     for i in range(size):
